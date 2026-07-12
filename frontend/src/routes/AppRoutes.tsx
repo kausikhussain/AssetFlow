@@ -10,10 +10,15 @@ import { Organization } from '../pages/Organization';
 import { Reports } from '../pages/Reports';
 import { Notifications } from '../pages/Notifications';
 
-import { AllocationPage } from '../modules/allocation/AllocationPage';
-import { BookingPage } from '../modules/booking/BookingPage';
-import { MaintenancePage } from '../modules/maintenance/MaintenancePage';
-import { AuditPage } from '../modules/audit/AuditPage';
+import { Dashboard } from '../pages/Dashboard';
+import { Organization } from '../pages/Organization';
+import { Assets } from '../pages/Assets';
+import { AllocationPage as Allocation } from '../modules/allocation/AllocationPage';
+import { Bookings } from '../pages/Bookings';
+import { Maintenance } from '../pages/Maintenance';
+import { Audit } from '../pages/Audit';
+import { Reports } from '../pages/Reports';
+import { Notifications } from '../pages/Notifications';
 
 export const AppRoutes = () => {
   const { isAuthenticated, loading } = useAuth();
@@ -30,10 +35,10 @@ export const AppRoutes = () => {
         <Route element={<DashboardLayout />}>
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/assets" element={<Assets />} />
-          <Route path="/allocation" element={<AllocationPage />} />
-          <Route path="/bookings" element={<BookingPage />} />
-          <Route path="/maintenance" element={<MaintenancePage />} />
-          <Route path="/audit" element={<AuditPage />} />
+          <Route path="/allocation" element={<Allocation />} />
+          <Route path="/bookings" element={<Bookings />} />
+          <Route path="/maintenance" element={<Maintenance />} />
+          <Route path="/audit" element={<Audit />} />
           <Route path="/reports" element={<Reports />} />
           <Route path="/notifications" element={<Notifications />} />
           

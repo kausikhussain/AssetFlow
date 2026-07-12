@@ -42,11 +42,11 @@ export const Reports = () => {
   }
 
   return (
-    <div className="space-y-6 max-w-7xl mx-auto pb-10">
+    <div className="space-y-8 max-w-[1600px] mx-auto pb-12">
       <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
         <div>
-          <h1 className="text-3xl font-bold text-text">Reports & Analytics</h1>
-          <p className="text-muted mt-1">Analyze asset utilization and operational trends.</p>
+          <h1 className="text-[28px] font-bold text-text tracking-tight">Reports & Analytics</h1>
+          <p className="text-muted mt-1 text-sm">Analyze asset utilization and operational trends.</p>
         </div>
         <Button className="gap-2" variant="outline">
           <Download size={18} />
@@ -172,3 +172,4 @@ export const Reports = () => {
     </div>
   );
 };
+
