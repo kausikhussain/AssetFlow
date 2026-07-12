@@ -37,7 +37,6 @@ export const AllocationPage: React.FC = () => {
   
   // Form Validation/Submit errors
   const [formError, setFormError] = useState<string | null>(null);
-  const [formSuccess, setFormSuccess] = useState<string | null>(null);
 
   // Load Data
   const loadData = async () => {
@@ -67,7 +66,6 @@ export const AllocationPage: React.FC = () => {
   const handleAllocate = async (e: React.FormEvent) => {
     e.preventDefault();
     setFormError(null);
-    setFormSuccess(null);
 
     if (!allocateAssetId || !allocateToId || !allocateDueDate) {
       setFormError('Please fill in all fields.');
@@ -81,7 +79,6 @@ export const AllocationPage: React.FC = () => {
         allocated_to_id: parseInt(allocateToId),
         due_date: new Date(allocateDueDate).toISOString()
       });
-      setFormSuccess('Asset allocated successfully!');
       setIsAllocateOpen(false);
       // Reset
       setAllocateAssetId('');
@@ -179,7 +176,7 @@ export const AllocationPage: React.FC = () => {
           </p>
         </div>
         {isManager && (
-          <Button onClick={() => { setIsAllocateOpen(true); setFormError(null); setFormSuccess(null); }} className="w-full md:w-auto">
+          <Button onClick={() => { setIsAllocateOpen(true); setFormError(null); }} className="w-full md:w-auto">
             Allocate Asset
           </Button>
         )}

@@ -1,5 +1,5 @@
-import React, { createContext, useState, useEffect, useContext } from 'react';
-import { User, AuthResponse } from '../types';
+import { createContext, useState, useEffect, useContext, ReactNode, FC } from 'react';
+import { User } from '../types';
 import * as authService from '../services/auth.service';
 
 interface AuthContextType {
@@ -12,7 +12,7 @@ interface AuthContextType {
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
-export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+export const AuthProvider: FC<{ children: ReactNode }> = ({ children }) => {
   const mockAdminUser: User = {
     id: 1,
     email: 'admin@assetflow.com',
@@ -22,7 +22,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
   };
 
   const [user, setUser] = useState<User | null>(mockAdminUser);
-  const [loading, setLoading] = useState(false);
+  const [loading] = useState(false);
 
   useEffect(() => {
     // Authentication temporarily bypassed for development
