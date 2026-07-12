@@ -1,5 +1,5 @@
 import enum
-from sqlalchemy import Column, Integer, String, Boolean, ForeignKey, Enum as SQLEnum
+from sqlalchemy import Column, Integer, String, Boolean, ForeignKey, Enum as SQLEnum, Date
 from sqlalchemy.orm import relationship
 from app.db.base_class import Base
 
@@ -26,6 +26,7 @@ class Asset(Base):
     serial_number = Column(String, unique=True, index=True, nullable=True)
     model = Column(String, nullable=True)
     description = Column(String, nullable=True)
+    purchase_date = Column(Date, nullable=True)
 
     # Relationships
     department = relationship("Department", foreign_keys=[department_id])
