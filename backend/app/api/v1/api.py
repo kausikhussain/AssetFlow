@@ -1,3 +1,4 @@
+from fastapi import APIRouter
 from app.api.v1.routers import auth, users, dashboard, departments, categories, employees
 
 api_router = APIRouter()
