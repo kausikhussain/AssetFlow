@@ -51,3 +51,85 @@ After startup, the services will be available at:
 - Axios interceptors for global JWT injection and error handling.
 - Reusable UI Components (Button, Input, Card).
 - Auth system ready to connect to FastAPI JWT.
+
+
+---
+
+# 📸 Application Screenshots
+
+Below are screenshots demonstrating the key features and user interface of the AssetFlow Enterprise Asset & Resource Management System.
+
+### 🔐 Login
+Secure authentication system where employees log in using their email and password. New users are registered as Employees and roles are assigned only by the Administrator.
+
+![Login](assets/screenshots/login.png)
+
+### 📊 Dashboard
+Centralized command center providing real-time insights into asset allocation, maintenance requests, and active resource bookings.
+
+![Dashboard](assets/screenshots/dashboard.png)
+
+### 🏢 Organization Setup
+Comprehensive configuration interface for managing the core structure of your enterprise, including physical locations and divisions.
+
+![Organization Setup](assets/screenshots/organization-setup.png)
+
+### 🏢 Department Management
+Dedicated module for creating, updating, and monitoring the various departments within your organization.
+
+![Department Management](assets/screenshots/department-management.png)
+
+### 👥 Employee Directory
+Complete overview of all registered staff members, allowing administrators to manage user roles and organizational hierarchy.
+
+![Employee Directory](assets/screenshots/employee-directory.png)
+
+### 🏷️ Asset Categories
+Systematic classification framework to organize assets by type, enabling efficient searching and standardized reporting.
+
+![Asset Categories](assets/screenshots/asset-categories.png)
+
+### ➕ Asset Registration
+Streamlined intake form to easily add new equipment, specifying metadata such as serial numbers, purchase dates, and warranties.
+
+![Asset Registration](assets/screenshots/asset-registration.png)
+
+### 📦 Asset Directory
+A powerful searchable and filterable grid displaying all organizational assets along with their current status and assignment.
+
+![Asset Directory](assets/screenshots/asset-directory.png)
+
+### 🔄 Asset Allocation
+Dedicated workflow for checking out assets to employees or departments, complete with tracking for due dates and conditions.
+
+![Asset Allocation](assets/screenshots/asset-allocation.png)
+
+### 📅 Resource Booking
+Interactive scheduling system allowing staff to reserve shared resources like conference rooms or specialized equipment.
+
+![Resource Booking](assets/screenshots/resource-booking.png)
+
+### 🛠️ Maintenance Management
+End-to-end ticketing system for reporting issues, assigning technicians, and tracking repair resolutions.
+
+![Maintenance Management](assets/screenshots/maintenance-management.png)
+
+### ✅ Asset Audit
+Compliance-focused module for conducting periodic physical inventory checks and verifying asset locations.
+
+![Asset Audit](assets/screenshots/asset-audit.png)
+
+### 📈 Reports & Analytics
+Advanced reporting engine generating comprehensive visual summaries of asset utilization, depreciation, and lifecycle metrics.
+
+![Reports & Analytics](assets/screenshots/reports-analytics.png)
+
+### 🔔 Notifications
+Real-time alerts keeping users informed about pending approvals, maintenance updates, and upcoming reservation times.
+
+![Notifications](assets/screenshots/notifications.png)
+
+### 📜 Activity Logs
+Immutable audit trail recording every critical action within the system for maximum accountability and security tracking.
+
+![Activity Logs](assets/screenshots/activity-logs.png)
