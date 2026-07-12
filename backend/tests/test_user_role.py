@@ -34,11 +34,27 @@ async def test_user_signup_default_role(db):
     assert new_user.email == "new_emp@example.com"
     assert new_user.role == UserRole.EMPLOYEE
     
-    # Verify it is persisted correctly in the database
-    await db.commit()
-    
     # Retrieve it back
     result = await db.execute(select(User).where(User.id == new_user.id))
     persisted_user = result.scalars().first()
     assert persisted_user is not None
     assert persisted_user.role == UserRole.EMPLOYEE
+
+from app.core import security
+from app.schemas.token import TokenPayload
+from jose import jwt
+from app.core.config import settings
+
+def test_jwt_role_integration():
+    user_id = 123
+    email = "test@example.com"
+    role = UserRole.ASSET_MANAGER
+    
+    token = security.create_access_token(user_id, email=email, role=role.value)
+    
+    payload = jwt.decode(token, settings.SECRET_KEY, algorithms=[settings.ALGORITHM])
+    token_data = TokenPayload(**payload)
+    
+    assert token_data.sub == "123"
+    assert token_data.email == email
+    assert token_data.role == UserRole.ASSET_MANAGER
