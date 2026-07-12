@@ -2,9 +2,11 @@ import api from './api';
 
 export interface Asset {
   id: number;
+  asset_tag?: string;
   name: string;
   serial_number: string;
   model: string;
+  location?: string;
   status: 'available' | 'allocated' | 'under_maintenance' | 'lost' | 'retired' | 'AVAILABLE' | 'ALLOCATED' | 'UNDER_MAINTENANCE' | 'LOST' | 'RETIRED';
   description?: string;
   is_shared?: boolean;
