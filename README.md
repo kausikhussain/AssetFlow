@@ -59,40 +59,10 @@ After startup, the services will be available at:
 
 Below are screenshots demonstrating the key features and user interface of the AssetFlow Enterprise Asset & Resource Management System.
 
-### 🔐 Login
-Secure authentication system where employees log in using their email and password. New users are registered as Employees and roles are assigned only by the Administrator.
-
-![Login](assets/screenshots/login.png)
-
 ### 📊 Dashboard
 Centralized command center providing real-time insights into asset allocation, maintenance requests, and active resource bookings.
 
 ![Dashboard](assets/screenshots/dashboard.png)
-
-### 🏢 Organization Setup
-Comprehensive configuration interface for managing the core structure of your enterprise, including physical locations and divisions.
-
-![Organization Setup](assets/screenshots/organization-setup.png)
-
-### 🏢 Department Management
-Dedicated module for creating, updating, and monitoring the various departments within your organization.
-
-![Department Management](assets/screenshots/department-management.png)
-
-### 👥 Employee Directory
-Complete overview of all registered staff members, allowing administrators to manage user roles and organizational hierarchy.
-
-![Employee Directory](assets/screenshots/employee-directory.png)
-
-### 🏷️ Asset Categories
-Systematic classification framework to organize assets by type, enabling efficient searching and standardized reporting.
-
-![Asset Categories](assets/screenshots/asset-categories.png)
-
-### ➕ Asset Registration
-Streamlined intake form to easily add new equipment, specifying metadata such as serial numbers, purchase dates, and warranties.
-
-![Asset Registration](assets/screenshots/asset-registration.png)
 
 ### 📦 Asset Directory
 A powerful searchable and filterable grid displaying all organizational assets along with their current status and assignment.
