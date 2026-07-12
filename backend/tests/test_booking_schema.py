@@ -15,7 +15,7 @@ async def test_booking_schema_creation(db):
     # 1. Create prerequisites
     dept = Department(name="IT", code="IT01")
     cat = Category(name="Electronics", code="ELEC")
-    user = User(email="test@example.com", full_name="Test User", hashed_password="pw", role=UserRole.employee, is_active=True)
+    user = User(email="test@example.com", full_name="Test User", hashed_password="pw", role=UserRole.EMPLOYEE, is_active=True)
     db.add_all([dept, cat, user])
     await db.commit()
 

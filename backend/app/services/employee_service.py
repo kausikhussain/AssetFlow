@@ -64,7 +64,7 @@ class EmployeeService:
     async def update_role(self, db: AsyncSession, id: int, obj_in: EmployeeRoleUpdate, current_user: User) -> User:
         # Business Rules:
         # - Only ADMIN can change roles.
-        if current_user.role != UserRole.admin:
+        if current_user.role != UserRole.ADMIN:
             raise UserRoleModificationException("Only administrators can modify roles.")
             
         # - Users cannot promote themselves.
@@ -77,7 +77,7 @@ class EmployeeService:
         
         # - Department Head must belong to assigned department.
         # If user is promoted to department_head, they must have a department assigned.
-        if obj_in.role == UserRole.department_head and user.department_id is None:
+        if obj_in.role == UserRole.DEPARTMENT_HEAD and user.department_id is None:
             raise DepartmentHeadAssignmentException("Department Head must belong to an assigned department.")
             
         updated = await employee_repo.update(db, db_obj=user)
