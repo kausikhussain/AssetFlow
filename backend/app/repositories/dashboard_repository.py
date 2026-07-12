@@ -5,7 +5,7 @@ from sqlalchemy.future import select
 from sqlalchemy import func, or_, and_
 
 from app.models.user import User, UserRole
-from app.models.asset import Asset
+from app.models.asset import Asset, AssetStatus
 from app.models.allocation import Allocation, AllocationStatus, AllocationToType
 from app.models.booking import Booking
 from app.models.maintenance_request import MaintenanceRequest
@@ -30,7 +30,7 @@ class DashboardRepository:
         # Base queries definitions with filters
         
         # 1. Assets Available
-        available_stmt = select(func.count(Asset.id)).where(Asset.status == "AVAILABLE")
+        available_stmt = select(func.count(Asset.id)).where(Asset.status == AssetStatus.available)
         if role == UserRole.asset_manager:
             available_stmt = available_stmt.where(Asset.managed_by_id == user_id)
         elif role == UserRole.department_head:
@@ -41,7 +41,7 @@ class DashboardRepository:
             )
 
         # 2. Assets Allocated
-        allocated_stmt = select(func.count(Asset.id)).where(Asset.status == "ALLOCATED")
+        allocated_stmt = select(func.count(Asset.id)).where(Asset.status == AssetStatus.allocated)
         if role == UserRole.asset_manager:
             allocated_stmt = allocated_stmt.where(Asset.managed_by_id == user_id)
         elif role == UserRole.department_head:
