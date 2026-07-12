@@ -3,7 +3,7 @@ from datetime import datetime, timedelta
 from app.db.session import SessionLocal
 from app.models.user import User, UserRole
 from app.models.asset import Asset, AssetStatus
-from app.models.booking import Booking
+from app.models.booking import ResourceBooking
 from app import crud, schemas
 
 def run_verification():

@@ -7,7 +7,7 @@ from app.models.user import User, UserRole
 from app.models.department import Department
 from app.models.asset import Asset, AssetStatus
 from app.models.allocation import Allocation, AllocationStatus, AllocationToType
-from app.models.booking import Booking
+from app.models.booking import ResourceBooking
 from app.models.maintenance_request import MaintenanceRequest
 from app.models.transfer import TransferRequest, TransferRequestStatus
 from app.models.activity_log import ActivityLog
