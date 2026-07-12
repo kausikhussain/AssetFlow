@@ -12,6 +12,7 @@ const USE_MOCK_DATA = import.meta.env.VITE_USE_MOCK_DATA === 'true';
 export const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [role, setRole] = useState('employee'); // Default role
   const [showPassword, setShowPassword] = useState(false);
   const [rememberMe, setRememberMe] = useState(false);
   const [error, setError] = useState('');
@@ -22,7 +23,7 @@ export const Login = () => {
     e.preventDefault();
     setError('');
     try {
-      await login(email, password);
+      await login(email, password, role);
       navigate('/dashboard');
     } catch (err) {
       setError('Invalid email or password');
